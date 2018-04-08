@@ -10,6 +10,7 @@ namespace PMSS.Send
 {
     public class EmailSend
     {
+        /*test*/
         private string emailFrom;
         public string EmailFrom 
         {
