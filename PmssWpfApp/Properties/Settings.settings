@@ -1,0 +1,207 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PmssWpfApp.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TemperatureLevels" Type="System.String" Scope="User">
+      <Value Profile="(Default)">10,max</Value>
+    </Setting>
+    <Setting Name="TemperatureColors" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#FFFF0000,#FF000000</Value>
+    </Setting>
+    <Setting Name="MonitorRain01Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\surface\r1</Value>
+    </Setting>
+    <Setting Name="MonitorRain03Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\surface\plot</Value>
+    </Setting>
+    <Setting Name="MonitorRain06Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\surface\r6</Value>
+    </Setting>
+    <Setting Name="Rain01Levels" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Rain01Colors" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Rain03Levels" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Rain06Levels" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Rain12Levels" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Rain24Levels" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Rain03Colors" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Rain06Colors" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Rain12Colors" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Rain24Colors" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FloodLevels" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FloodColors" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DisasterLevels" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DisasterColors" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ProductExportFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\product</Value>
+    </Setting>
+    <Setting Name="MonitorRain01Value" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="MonitorRain03Value" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="MonitorRain06Value" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="MonitorRain24Value" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="MonitorRain01jmFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\surface\r1-jm</Value>
+    </Setting>
+    <Setting Name="MonitorRain03jmFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\surface\plot-jm</Value>
+    </Setting>
+    <Setting Name="MonitorRain06jmFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\surface\r6</Value>
+    </Setting>
+    <Setting Name="MonitorRain2405Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\surface\r6</Value>
+    </Setting>
+    <Setting Name="MonitorRain2408Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\surface\r6</Value>
+    </Setting>
+    <Setting Name="MonitorRain2408jmFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\surface\r6</Value>
+    </Setting>
+    <Setting Name="MonitorRain2408AllFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\surface\r6</Value>
+    </Setting>
+    <Setting Name="MonitorRain2414Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\surface\r6</Value>
+    </Setting>
+    <Setting Name="MonitorRain2414jmFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\surface\r6</Value>
+    </Setting>
+    <Setting Name="MonitorRain2414AllFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\surface\r6</Value>
+    </Setting>
+    <Setting Name="MonitorRain2420Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\surface\r6</Value>
+    </Setting>
+    <Setting Name="MonitorRain2420jmFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\surface\r6</Value>
+    </Setting>
+    <Setting Name="MonitorRain2420AllFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\surface\r6</Value>
+    </Setting>
+    <Setting Name="MonitorRain01ZdFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\surface\zd_plot</Value>
+    </Setting>
+    <Setting Name="EditFloodFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\edit</Value>
+    </Setting>
+    <Setting Name="EditZilaoFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\edit</Value>
+    </Setting>
+    <Setting Name="EditDisasterFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\edit</Value>
+    </Setting>
+    <Setting Name="EditRiverFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\edit</Value>
+    </Setting>
+    <Setting Name="EditGTBReferFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\edit</Value>
+    </Setting>
+    <Setting Name="ECMWF03Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\newecmwf_grib\rain03\rain02</Value>
+    </Setting>
+    <Setting Name="ECMWF06Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\newecmwf_grib\rain06\rain01</Value>
+    </Setting>
+    <Setting Name="ECMWF12Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\newecmwf_grib\rain12\rain01</Value>
+    </Setting>
+    <Setting Name="ECMWF24Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\newecmwf_grib\rain24\rain01</Value>
+    </Setting>
+    <Setting Name="T63903Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\t639\rain03_3</Value>
+    </Setting>
+    <Setting Name="T63906Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\t639\rain06_3_h</Value>
+    </Setting>
+    <Setting Name="T63912Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\t639\rain12</Value>
+    </Setting>
+    <Setting Name="T63924Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\t639\rain24</Value>
+    </Setting>
+    <Setting Name="ModelDisaster1Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Z:\diamond\hjk\flood\output</Value>
+    </Setting>
+    <Setting Name="ModelDisaster2Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Z:\diamond\hjk\flood\test2004</Value>
+    </Setting>
+    <Setting Name="ModelZilaoFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Desktop\Projects\inform2\diamond\zilao\fxf\flood-all\30</Value>
+    </Setting>
+    <Setting Name="ModelRiverFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Z:\diamond\floodwarning</Value>
+    </Setting>
+    <Setting Name="ModelFloodFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Z:\diamond\flood\24hr</Value>
+    </Setting>
+    <Setting Name="ModelAreaRainFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\diamond\surface\valley\weight_fth</Value>
+    </Setting>
+    <Setting Name="ForcastWeather24Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Z:\diamond\update\spc\warning</Value>
+    </Setting>
+    <Setting Name="ForcastWeatherProFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Z:\diamond\update\spc\pro</Value>
+    </Setting>
+    <Setting Name="ForcastRainQPF24Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Desktop\Projects\inform2\diamond\update\flood\zl</Value>
+    </Setting>
+    <Setting Name="ForcastRainQPF06Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Z:\diamond\update</Value>
+    </Setting>
+    <Setting Name="MonitorRain05DaysFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\surface\r1-jm</Value>
+    </Setting>
+    <Setting Name="MonitorRain14DaysFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\wenxu\Downloads\BaiduYun\inform\data\surface\r1-jm</Value>
+    </Setting>
+    <Setting Name="Rain05DaysColors" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Rain05DaysLevels" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Rain14DaysColors" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Rain14DaysLevels" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

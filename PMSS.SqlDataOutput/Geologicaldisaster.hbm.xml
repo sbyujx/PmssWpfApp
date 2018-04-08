@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="PMSS.SqlDataOutput" namespace="PMSS.SqlDataOutput" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Geologicaldisaster" table="geologicaldisaster" lazy="true" >
+    <id name="Recordid" column="RecordId" />
+    <property name="Time">
+      <column name="Time" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="Area">
+      <column name="Area" sql-type="varchar(60)" not-null="false" />
+    </property>
+    <property name="Process">
+      <column name="Process" sql-type="varchar(500)" not-null="false" />
+    </property>
+    <property name="Disastersituation">
+      <column name="DisasterSituation" sql-type="varchar(1000)" not-null="false" />
+    </property>
+    <property name="Inwarningarea">
+      <column name="InWarningArea" sql-type="tinyint(1)" not-null="false" />
+    </property>
+    <property name="Comment">
+      <column name="Comment" sql-type="varchar(100)" not-null="false" />
+    </property>
+    <property name="Type">
+      <column name="Type" sql-type="varchar(45)" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>

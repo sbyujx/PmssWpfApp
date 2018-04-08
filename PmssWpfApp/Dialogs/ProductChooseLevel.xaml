@@ -1,0 +1,15 @@
+﻿<Window x:Class="PmssWpfApp.Dialogs.ProductChooseLevel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PmssWpfApp.Dialogs"
+        mc:Ignorable="d"
+        Title="ProductChooseLevel" Height="300" Width="300">
+    <Grid>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="30,51,0,0" VerticalAlignment="Top" Width="239"/>
+        <Button x:Name="button" IsCancel="True" Content="确定" HorizontalAlignment="Left" Margin="194,89,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="label" Content="请选择产品种类" HorizontalAlignment="Left" Margin="30,20,0,0" VerticalAlignment="Top" Width="239"/>
+
+    </Grid>
+</Window>

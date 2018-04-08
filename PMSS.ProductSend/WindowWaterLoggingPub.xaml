@@ -1,0 +1,56 @@
+﻿<Window x:Class="PMSS.ProductSend.WindowWaterLoggingPub"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:ff="clr-namespace:Microsoft.TeamFoundation.MVVM;assembly=Microsoft.TeamFoundation.Controls"
+        xmlns:local="clr-namespace:PMSS.ProductSend"
+        mc:Ignorable="d"
+        Title="渍涝产品发布" Height="350" Width="940">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="*产品期数："/>
+        <TextBox Grid.Column="3" Grid.ColumnSpan="5" Grid.Row="1" BorderBrush="Brown" Text="{Binding Section}"/>
+        <Button Grid.Column="9" Grid.Row="1" Content="确  定" Command="{Binding ConfirmCmd}"/>
+        <TextBlock Grid.Column="1" Grid.Row="3" Text="产品标题："/>
+        <TextBox Grid.Column="3" Grid.ColumnSpan="5" Grid.Row="3" BorderBrush="Brown" Text="{Binding Title}"/>
+        <TextBlock Grid.Column="1" Grid.Row="5" Text="附  件："/>
+        <ListBox Grid.Column="3" Grid.ColumnSpan="5" Grid.Row="5" BorderBrush="Brown" ItemsSource="{Binding AttList}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Grid.Column="9" Grid.Row="5" Margin="0,0,0,75" Content="添加附件" Command="{Binding AddAttCmd}"/>
+        <Label Grid.Column="3" Grid.Row="7" Content="{Binding Hint}"/>
+        <Button Grid.Column="9" Grid.Row="7" Content="发  布" Command="{Binding PubCmd}"/>
+    </Grid>
+</Window>

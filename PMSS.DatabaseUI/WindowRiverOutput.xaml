@@ -1,0 +1,87 @@
+﻿<Window x:Class="PMSS.DatabaseUI.WindowRiverOutput"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:PMSS.DatabaseUI"
+        mc:Ignorable="d"
+        Title="导出河道水情" Height="570" Width="850">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="400"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="选择站点："/>
+        <DataGrid Grid.Column="3" Grid.ColumnSpan="7" Grid.Row="1" ItemsSource="{Binding StationOption}"
+                  CanUserReorderColumns="True" CanUserResizeColumns="True" 
+                  CanUserResizeRows="False" CanUserSortColumns="True"
+                  AutoGenerateColumns="False" x:Name="RiverGrid">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn  Header="站点号" Width="1*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=StationId}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn  Header="站名" Width="1*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=StationName}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn  Header="站址" Width="3*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=Address}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn  Header="河名" Width="1*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=RiverName}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn  Header="单选" Width="0.5*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <RadioButton GroupName="riverGroup" IsChecked="{Binding Path=IsSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock Grid.Column="1" Grid.Row="3" Text="选择时间："/>
+        <xctk:DateTimePicker Grid.Column="3" Grid.Row="3" BorderBrush="Brown" Value="{Binding TimeFrom}"/>
+        <TextBlock Grid.Column="4" Grid.Row="3" Text="     至"/>
+        <xctk:DateTimePicker Grid.Column="5" Grid.Row="3" BorderBrush="Brown" Value="{Binding TimeTo}"/>
+        <TextBox Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="3" BorderBrush="Brown" Margin="10,0,0,0" Text="{Binding SearchContent}"/>
+        <Button Grid.Column="9" Grid.Row="3" Content="搜索" Command="{Binding SearchCmd}"/>
+        <Button Grid.Column="7" Grid.Row="5" Content="显示曲线" Command="{Binding DataShowCmd}"/>
+        <Button Grid.Column="9" Grid.Row="5" Content="导出" Command="{Binding DataOutCmd}"/>
+        <Label Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="5" Content="{Binding Hint}"/>
+    </Grid>
+</Window>

@@ -1,0 +1,73 @@
+﻿<Window x:Class="PMSS.ProductSend.WindowSendLan"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:ff="clr-namespace:Microsoft.TeamFoundation.MVVM;assembly=Microsoft.TeamFoundation.Controls"
+        xmlns:local="clr-namespace:PMSS.ProductSend"
+        mc:Ignorable="d"
+        Title="局域网分发" Height="500" Width="600">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="常用地址列表："/>
+        <ListBox Grid.Column="3" Grid.Row="1" BorderBrush="Brown" ItemsSource="{Binding ContactList}" SelectedItem="{Binding SelectItem}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectionChanged">
+                    <i:InvokeCommandAction Command="{Binding ChangeCmd}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Vertical"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Path=LanAlias}" />
+                        <TextBlock Text="("/>
+                        <TextBlock Text="{Binding Path=LanPath}" />
+                        <TextBlock Text=")"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <TextBlock Grid.Column="1" Grid.Row="3" Text="*局域网地址："/>
+        <TextBox Grid.Column="3" Grid.Row="3" BorderBrush="Brown" Text="{Binding Path}"/>
+        <TextBlock Grid.Column="1" Grid.Row="5" Text="用户名："/>
+        <TextBox Grid.Column="3" Grid.Row="5" BorderBrush="Brown" Text="{Binding UserName}"/>
+        <TextBlock Grid.Column="1" Grid.Row="7" Text="密码："/>
+        <PasswordBox Grid.Column="3" Grid.Row="7" BorderBrush="Brown" ff:PasswordBoxAssistant.Password="{Binding Pwd}"/>
+        <TextBlock Grid.Column="1" Grid.Row="9" Text="*本地文件："/>
+        <TextBox Grid.Column="3" Grid.Row="9" BorderBrush="Brown" Text="{Binding FileName}"/>
+        <Button Grid.Column="5" Grid.Row="9" Content="打  开" Command="{Binding OpenCmd}"/>
+        <Label Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="11" Content="{Binding Hint}"/>
+        <Button Grid.Column="5" Grid.Row="11" Content="上  传" Command="{Binding SendCmd}"/>
+    </Grid>
+</Window>

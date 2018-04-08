@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8BC8BC6F-A502-4C7D-8669-9D85FA842019}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PmssWpfApp</RootNamespace>
+    <AssemblyName>PmssWpfApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>earth.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Esri.ArcGISRuntime, Version=10.2.7.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Controls, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\hqlo5bkh.t4m\Microsoft.TeamFoundation.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Core.1.1.2\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Shell.1.1.1\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.8\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.8\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Prism, Version=6.1.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Core.6.1.0\lib\net45\Prism.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=2.7.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.7\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=2.7.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.7\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=2.7.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.7\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=2.7.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.7\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid, Version=2.7.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.7\lib\net40\Xceed.Wpf.DataGrid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=2.7.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.7\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Dialogs\LevelValueManagerWindow.xaml.cs">
+      <DependentUpon>LevelValueManagerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\LineValueInput.xaml.cs">
+      <DependentUpon>LineValueInput.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MonitorHydrologicHistory.xaml.cs">
+      <DependentUpon>MonitorHydrologicHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MonitorSetting.xaml.cs">
+      <DependentUpon>MonitorSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ProductChooseLevel.xaml.cs">
+      <DependentUpon>ProductChooseLevel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ProductChooseSaveOption.xaml.cs">
+      <DependentUpon>ProductChooseSaveOption.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RibbonMainViewModel.cs" />
+    <Compile Include="RibbonMainWindow.xaml.cs">
+      <DependentUpon>RibbonMainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\DataBaseVm.cs" />
+    <Compile Include="ViewModel\DataCheckingVm.cs" />
+    <Compile Include="ViewModel\DataMonitoringVm.cs" />
+    <Compile Include="ViewModel\DrawOptionsGroupVm.cs" />
+    <Compile Include="ViewModel\DrawOptionVm.cs" />
+    <Compile Include="ViewModel\LabelListSettingVm.cs" />
+    <Compile Include="ViewModel\LabelSettingVm.cs" />
+    <Compile Include="ViewModel\LayersTreeViewItem.cs" />
+    <Compile Include="ViewModel\LayersTreeViewVm.cs" />
+    <Compile Include="ViewModel\LevelValueManagerVm.cs" />
+    <Compile Include="ViewModel\MapVm.cs" />
+    <Page Include="Dialogs\LevelValueManagerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="ViewModel\MouseInfoVm.cs" />
+    <Compile Include="ViewModel\ProductMakeVm.cs" />
+    <Compile Include="ViewModel\ProductSendVm.cs" />
+    <Page Include="Dialogs\LineValueInput.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\MonitorHydrologicHistory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\MonitorSetting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\ProductChooseLevel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\ProductChooseSaveOption.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="RibbonMainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Data\BaseMaps\PMSS-Base-Asia.tpk" />
+    <None Include="Data\BaseMaps\PMSS-Base-City.tpk" />
+    <None Include="Data\BaseMaps\PMSS-Base-District.tpk" />
+    <None Include="Data\BaseMaps\PMSS-Base-Province.tpk" />
+    <None Include="Data\BaseMaps\PMSS-Base-River.tpk" />
+    <None Include="Data\BaseMaps\ProductMask.tpk" />
+    <None Include="Data\BaseMaps\RiverLevel1.tpk" />
+    <None Include="Data\BaseMaps\RiverLevel2.tpk" />
+    <None Include="Data\BaseMaps\RiverLevel3.tpk" />
+    <None Include="Data\BaseMaps\RiverLevel4.tpk" />
+    <None Include="Data\BaseMaps\RiverLevel5.tpk" />
+    <None Include="Data\BaseMaps\RiverRegion.tpk" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\MicapsFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Micaps.Core\Micaps.Core.csproj">
+      <Project>{9b7db7f7-bd2c-4bbc-8f27-d647d955ab37}</Project>
+      <Name>Micaps.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Micaps.DataChecking\Micaps.DataChecking.csproj">
+      <Project>{d381115d-092e-43e5-94c1-4c5e6c66563a}</Project>
+      <Name>Micaps.DataChecking</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Micaps.Product\Micaps.Product.csproj">
+      <Project>{1a9e5596-de89-4a9f-a117-b81d530647e4}</Project>
+      <Name>Micaps.Product</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Micaps.Render\Micaps.Render.csproj">
+      <Project>{8f7c4e57-223a-45f9-a0e7-53f46024ed24}</Project>
+      <Name>Micaps.Render</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PMSS.ConfigureSet\PMSS.ConfigureSet.csproj">
+      <Project>{99381d6a-3a88-442d-a1eb-10dd240a9e58}</Project>
+      <Name>PMSS.ConfigureSet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PMSS.DatabaseUI\PMSS.DatabaseUI.csproj">
+      <Project>{a40d4bf0-ac4f-4998-8122-273310bf684c}</Project>
+      <Name>PMSS.DatabaseUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PMSS.Log\PMSS.Log.csproj">
+      <Project>{c67f3c16-d723-4449-9a80-2de82fb079c6}</Project>
+      <Name>PMSS.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PMSS.ProductSend\PMSS.ProductSend.csproj">
+      <Project>{d4b1af2f-6993-43da-8cc2-8a6ddbcbe58a}</Project>
+      <Name>PMSS.ProductSend</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PMSS.Render\PMSS.Render.csproj">
+      <Project>{19d35c64-8b27-41eb-bf52-4ee43868f71c}</Project>
+      <Name>PMSS.Render</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PMSS.WordProductUI\PMSS.WordProductUI.csproj">
+      <Project>{4f12cbb5-51c1-4c0c-96e8-39750794f199}</Project>
+      <Name>PMSS.WordProductUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\BaseMaps\ProvinceNames.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\EditLayer.png" />
+    <Resource Include="Img\StartTab\NewEditLayer.png" />
+    <Resource Include="Img\StartTab\Topographic.png" />
+    <Resource Include="Img\StartTab\保存编辑.gif" />
+    <Resource Include="Img\StartTab\删除.gif" />
+    <Resource Include="Img\StartTab\撤消.gif" />
+    <Resource Include="Img\StartTab\数据更新.gif" />
+    <Resource Include="Img\StartTab\重做.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\clear.png" />
+    <Resource Include="Img\StartTab\clear01.png" />
+    <Resource Include="Img\StartTab\clear_02.png" />
+    <Resource Include="Img\StartTab\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\set.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\removeLy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\export.png" />
+    <Resource Include="Img\StartTab\import_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\槽线.gif" />
+    <Resource Include="Img\StartTab\等值线.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\emailSend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\emailContact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\notesContact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\notesSend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\notesConfig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\ftpContact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\ftpSend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\lanSend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\lanContact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\emailConfig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\onekey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\dir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\word1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\word2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\word3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\riverOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\reservoirOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\geoOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\torrentOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\waterloggingOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\toorent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\geoIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\waterLoggingIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\Monitor\History.png" />
+    <Resource Include="Img\Monitor\Realtime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\Monitor\rain_32_1.png" />
+    <Resource Include="Img\Monitor\rain_32_12.png" />
+    <Resource Include="Img\Monitor\rain_32_24.png" />
+    <Resource Include="Img\Monitor\rain_32_3.png" />
+    <Resource Include="Img\Monitor\rain_32_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\Check\ShanHong.png" />
+    <Resource Include="Img\Check\Zilao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\Check\RainfallArea.png" />
+    <Resource Include="Img\Check\天气预报信息.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\Check\DiZai.png" />
+    <Resource Include="Img\Check\River.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="earth.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\Check\days14.png" />
+    <Resource Include="Img\Check\days5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Product\Disaster.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Img\Product\SouthSea.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\hydromonitor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\BaseMaps\DistrictNames.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\screenshot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\MapLeft.gif" />
+    <Resource Include="Img\StartTab\MapRight.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Product\qixiangjuLogo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Product\Flood.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Product\Zilao.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Product\River.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\StartTab\pubdisaster.png" />
+    <Resource Include="Img\StartTab\pubtorrent.png" />
+    <Resource Include="Img\StartTab\pubwaterlogging.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Product\Flood08.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

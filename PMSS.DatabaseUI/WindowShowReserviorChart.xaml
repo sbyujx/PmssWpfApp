@@ -1,0 +1,52 @@
+﻿<Window x:Class="PMSS.DatabaseUI.WindowShowReserviorChart"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:lvc="clr-namespace:LiveCharts;assembly=LiveCharts"
+        xmlns:local="clr-namespace:PMSS.DatabaseUI"
+        mc:Ignorable="d"
+        Title="显示水库水情曲线" Height="535" Width="900">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" x:Name="ChartPic">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="{Binding TitleText}" TextAlignment="Center" FontSize="16"/>
+            <lvc:LineChart x:Name="ResChart" Grid.Row="2" Series="{Binding HydroDatas}" Hoverable="True" Background="White" LegendLocation="Bottom">
+                <lvc:LineChart.AxisX>
+                    <lvc:Axis Foreground="Black" LabelFormatter="{Binding XFormatter}" Title="时间（月.日：时）">                        
+                    </lvc:Axis>
+                </lvc:LineChart.AxisX>
+                <lvc:LineChart.AxisY>
+                    <lvc:Axis Foreground="Black" LabelFormatter="{Binding YFormatter}" MinValue="{Binding MinY}" Title="库水位/汛限水位(米）"/>
+                    <lvc:Axis Foreground="Black" LabelFormatter="{Binding ZFormatter}" MinValue="0" Title="蓄水量（亿立方米）" Position="RightTop" />
+                </lvc:LineChart.AxisY>
+            </lvc:LineChart>
+        </Grid>
+        <Grid Grid.Row="2" HorizontalAlignment="Right">
+            <StackPanel Orientation="Horizontal">
+            <CheckBox Name="Xunxian" Content="汛限水位" IsChecked="{Binding Path=XuxianEnable}" Command="{Binding XunxianCmd}"/>
+                <CheckBox Name="Xushuiliang" Content="蓄水量" IsChecked="{Binding Path=XushuiliangEnable}" Command="{Binding XushuiliangCmd}"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="60"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="{Binding Hint}"/>
+            <Button Grid.Column="1" Content="保存图片" Command="{Binding SavePicCmd}"/>
+        </Grid>
+    </Grid>
+</Window>

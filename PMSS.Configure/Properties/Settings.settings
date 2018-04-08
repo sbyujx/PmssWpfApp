@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PMSS.Configure.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="EmailName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sbyujx@163.com</Value>
+    </Setting>
+    <Setting Name="EmailPwd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">w86x08f10</Value>
+    </Setting>
+    <Setting Name="FtpUri" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ftp://192.168.199.157/</Value>
+    </Setting>
+    <Setting Name="FtpUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sbyujx</Value>
+    </Setting>
+    <Setting Name="FtpPwd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">123456</Value>
+    </Setting>
+    <Setting Name="NotesServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">lily02/CMA</Value>
+    </Setting>
+    <Setting Name="NotesFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mail/zhoujun.nsf</Value>
+    </Setting>
+    <Setting Name="NotesPwd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">zhouj123</Value>
+    </Setting>
+    <Setting Name="LanAddr" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\192.168.199.157\share</Value>
+    </Setting>
+    <Setting Name="LanUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LanPwd" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

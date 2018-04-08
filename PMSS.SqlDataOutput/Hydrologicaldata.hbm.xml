@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="PMSS.SqlDataOutput" namespace="PMSS.SqlDataOutput" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Hydrologicaldata" table="hydrologicaldata" lazy="true" >
+    <id name="Recordid" column="RecordId" />
+    <property name="Stationid">
+      <column name="StationId" sql-type="varchar(45)" not-null="true" />
+    </property>
+    <property name="L">
+      <column name="L" sql-type="double" not-null="false" />
+    </property>
+    <property name="Q">
+      <column name="Q" sql-type="double" not-null="false" />
+    </property>
+    <property name="Wl1">
+      <column name="WL1" sql-type="double" not-null="false" />
+    </property>
+    <property name="Wl2">
+      <column name="WL2" sql-type="double" not-null="false" />
+    </property>
+    <property name="Time">
+      <column name="Time" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="Issign">
+      <column name="IsSign" sql-type="tinyint(1)" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>

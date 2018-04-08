@@ -1,0 +1,140 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace PMSS.CrawlerService
+{
+    public class HydrologyStation
+    {
+        private string uid; //站点号
+        public string Uid
+        {
+            get
+            {
+                return uid;
+            }
+            set
+            {
+                uid = value;
+            }
+        }
+
+        private string name; //站名
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
+
+        private double longitude; //经度
+        public double Longitude
+        {
+            get
+            {
+                return longitude;
+            }
+            set
+            {
+                longitude = value;
+            }
+        }
+
+        private double latitude; //纬度
+        public double Latitude
+        {
+            get
+            {
+                return latitude;
+            }
+            set
+            {
+                latitude = value;
+            }
+        }
+
+        private string river;  //河流名
+        public string River
+        {
+            get
+            {
+                return river;
+            }
+            set
+            {
+                river = value;
+            }
+        }
+
+        private string hydrographicNet;  //水系
+        public string HydrographicNet
+        {
+            get
+            {
+                return hydrographicNet;
+            }
+            set
+            {
+                hydrographicNet = value;
+            }
+        }
+
+        private string basin;   //流域
+        public string Basin
+        {
+            get
+            {
+                return basin;
+            }
+            set
+            {
+                basin = value;
+            }
+        }
+
+        private string administrativeRegion; //行政区域
+        public string AdministrativeRegion
+        {
+            get
+            {
+                return administrativeRegion;
+            }
+            set
+            {
+                administrativeRegion = value;
+            }
+        }
+
+        private string address;   //站点地址
+        public string Address
+        {
+            get
+            {
+                return address;
+            }
+            set
+            {
+                address = value;
+            }
+        }
+
+        private string type;  //站点类型（河道站，水库站，潮位站）
+        public string Type
+        {
+            get
+            {
+                return type;
+            }
+            set
+            {
+                type = value;
+            }
+        }
+    }
+}

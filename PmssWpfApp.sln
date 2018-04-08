@@ -1,0 +1,225 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PmssWpfApp", "PmssWpfApp\PmssWpfApp.csproj", "{8BC8BC6F-A502-4C7D-8669-9D85FA842019}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Micaps.Core", "Micaps.Core\Micaps.Core.csproj", "{9B7DB7F7-BD2C-4BBC-8F27-D647D955AB37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Micaps.DataAccess", "Micaps.DataAccess\Micaps.DataAccess.csproj", "{E093E67D-E30D-4ED6-A780-9FB33C5E1471}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Micaps.DataEntities", "Micaps.DataEntities\Micaps.DataEntities.csproj", "{645B641E-6025-487E-B4CD-258A0A579548}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Micaps.Render", "Micaps.Render\Micaps.Render.csproj", "{8F7C4E57-223A-45F9-A0E7-53F46024ED24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSS.SqlDataAccess", "PMSS.SqlDataAccess\PMSS.SqlDataAccess.csproj", "{90613557-9E09-4206-95A4-0081D6F1C0B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSS.Configure", "PMSS.Configure\PMSS.Configure.csproj", "{ED7981EB-DB79-472C-9763-540F7B2A7320}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSS.CrawlerService", "PMSS.CrawlerService\PMSS.CrawlerService.csproj", "{7ED765CA-2678-422E-851A-6432E771A187}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSS.ConfigureSet", "PMSS.ConfigureSet\PMSS.ConfigureSet.csproj", "{99381D6A-3A88-442D-A1EB-10DD240A9E58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSS.ProductSend", "PMSS.ProductSend\PMSS.ProductSend.csproj", "{D4B1AF2F-6993-43DA-8CC2-8A6DDBCBE58A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSS.Send", "PMSS.Send\PMSS.Send.csproj", "{07479ADD-1590-4B56-BC40-C86D3E9151C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSS.SqlDataIn", "PMSS.SqlDataIn\PMSS.SqlDataIn.csproj", "{7F265074-9AD1-4E1F-B478-4CBFDB0A66A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSS.SqlDataOutput", "PMSS.SqlDataOutput\PMSS.SqlDataOutput.csproj", "{F921BC1D-33EB-456B-9212-FC33DE9D5DFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSS.DatabaseUI", "PMSS.DatabaseUI\PMSS.DatabaseUI.csproj", "{A40D4BF0-AC4F-4998-8122-273310BF684C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSS.Render", "PMSS.Render\PMSS.Render.csproj", "{19D35C64-8B27-41EB-BF52-4EE43868F71C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSS.WordProduct", "PMSS.WordProduct\PMSS.WordProduct.csproj", "{58C982A4-0C14-4E1E-BD32-53EDC77F6193}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSS.WordProductUI", "PMSS.WordProductUI\PMSS.WordProductUI.csproj", "{4F12CBB5-51C1-4C0C-96E8-39750794F199}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Micaps.Product", "Micaps.Product\Micaps.Product.csproj", "{1A9E5596-DE89-4A9F-A117-B81D530647E4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dlls", "dlls", "{ACF64A3B-AD4C-45DF-9FF1-0C6659CF1207}"
+	ProjectSection(SolutionItems) = preProject
+		dlls\LiveCharts.dll = dlls\LiveCharts.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Micaps.DataChecking", "Micaps.DataChecking\Micaps.DataChecking.csproj", "{D381115D-092E-43E5-94C1-4C5E6C66563A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSS.Log", "PMSS.Log\PMSS.Log.csproj", "{C67F3C16-D723-4449-9A80-2DE82FB079C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PmssWpfNotificationApp", "PmssWpfNotificationApp\PmssWpfNotificationApp.csproj", "{68402A76-46E0-4DF2-A473-21323E698DF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSS.DataToMicaps", "PMSS.DataToMicaps\PMSS.DataToMicaps.csproj", "{6BA98A46-FCDB-4851-AA0D-E679163A174D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BC8BC6F-A502-4C7D-8669-9D85FA842019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BC8BC6F-A502-4C7D-8669-9D85FA842019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BC8BC6F-A502-4C7D-8669-9D85FA842019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BC8BC6F-A502-4C7D-8669-9D85FA842019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B7DB7F7-BD2C-4BBC-8F27-D647D955AB37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B7DB7F7-BD2C-4BBC-8F27-D647D955AB37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B7DB7F7-BD2C-4BBC-8F27-D647D955AB37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B7DB7F7-BD2C-4BBC-8F27-D647D955AB37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E093E67D-E30D-4ED6-A780-9FB33C5E1471}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E093E67D-E30D-4ED6-A780-9FB33C5E1471}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E093E67D-E30D-4ED6-A780-9FB33C5E1471}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E093E67D-E30D-4ED6-A780-9FB33C5E1471}.Release|Any CPU.Build.0 = Release|Any CPU
+		{645B641E-6025-487E-B4CD-258A0A579548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{645B641E-6025-487E-B4CD-258A0A579548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{645B641E-6025-487E-B4CD-258A0A579548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{645B641E-6025-487E-B4CD-258A0A579548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F7C4E57-223A-45F9-A0E7-53F46024ED24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F7C4E57-223A-45F9-A0E7-53F46024ED24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F7C4E57-223A-45F9-A0E7-53F46024ED24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F7C4E57-223A-45F9-A0E7-53F46024ED24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90613557-9E09-4206-95A4-0081D6F1C0B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90613557-9E09-4206-95A4-0081D6F1C0B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90613557-9E09-4206-95A4-0081D6F1C0B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90613557-9E09-4206-95A4-0081D6F1C0B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED7981EB-DB79-472C-9763-540F7B2A7320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED7981EB-DB79-472C-9763-540F7B2A7320}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED7981EB-DB79-472C-9763-540F7B2A7320}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED7981EB-DB79-472C-9763-540F7B2A7320}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ED765CA-2678-422E-851A-6432E771A187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ED765CA-2678-422E-851A-6432E771A187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ED765CA-2678-422E-851A-6432E771A187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ED765CA-2678-422E-851A-6432E771A187}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99381D6A-3A88-442D-A1EB-10DD240A9E58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99381D6A-3A88-442D-A1EB-10DD240A9E58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99381D6A-3A88-442D-A1EB-10DD240A9E58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99381D6A-3A88-442D-A1EB-10DD240A9E58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4B1AF2F-6993-43DA-8CC2-8A6DDBCBE58A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4B1AF2F-6993-43DA-8CC2-8A6DDBCBE58A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4B1AF2F-6993-43DA-8CC2-8A6DDBCBE58A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4B1AF2F-6993-43DA-8CC2-8A6DDBCBE58A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07479ADD-1590-4B56-BC40-C86D3E9151C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07479ADD-1590-4B56-BC40-C86D3E9151C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07479ADD-1590-4B56-BC40-C86D3E9151C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07479ADD-1590-4B56-BC40-C86D3E9151C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F265074-9AD1-4E1F-B478-4CBFDB0A66A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F265074-9AD1-4E1F-B478-4CBFDB0A66A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F265074-9AD1-4E1F-B478-4CBFDB0A66A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F265074-9AD1-4E1F-B478-4CBFDB0A66A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F921BC1D-33EB-456B-9212-FC33DE9D5DFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F921BC1D-33EB-456B-9212-FC33DE9D5DFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F921BC1D-33EB-456B-9212-FC33DE9D5DFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F921BC1D-33EB-456B-9212-FC33DE9D5DFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A40D4BF0-AC4F-4998-8122-273310BF684C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A40D4BF0-AC4F-4998-8122-273310BF684C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A40D4BF0-AC4F-4998-8122-273310BF684C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A40D4BF0-AC4F-4998-8122-273310BF684C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19D35C64-8B27-41EB-BF52-4EE43868F71C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19D35C64-8B27-41EB-BF52-4EE43868F71C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19D35C64-8B27-41EB-BF52-4EE43868F71C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19D35C64-8B27-41EB-BF52-4EE43868F71C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58C982A4-0C14-4E1E-BD32-53EDC77F6193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58C982A4-0C14-4E1E-BD32-53EDC77F6193}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58C982A4-0C14-4E1E-BD32-53EDC77F6193}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58C982A4-0C14-4E1E-BD32-53EDC77F6193}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F12CBB5-51C1-4C0C-96E8-39750794F199}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F12CBB5-51C1-4C0C-96E8-39750794F199}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F12CBB5-51C1-4C0C-96E8-39750794F199}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F12CBB5-51C1-4C0C-96E8-39750794F199}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A9E5596-DE89-4A9F-A117-B81D530647E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A9E5596-DE89-4A9F-A117-B81D530647E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A9E5596-DE89-4A9F-A117-B81D530647E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A9E5596-DE89-4A9F-A117-B81D530647E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D381115D-092E-43E5-94C1-4C5E6C66563A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D381115D-092E-43E5-94C1-4C5E6C66563A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D381115D-092E-43E5-94C1-4C5E6C66563A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D381115D-092E-43E5-94C1-4C5E6C66563A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C67F3C16-D723-4449-9A80-2DE82FB079C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C67F3C16-D723-4449-9A80-2DE82FB079C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C67F3C16-D723-4449-9A80-2DE82FB079C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C67F3C16-D723-4449-9A80-2DE82FB079C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68402A76-46E0-4DF2-A473-21323E698DF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68402A76-46E0-4DF2-A473-21323E698DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68402A76-46E0-4DF2-A473-21323E698DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68402A76-46E0-4DF2-A473-21323E698DF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BA98A46-FCDB-4851-AA0D-E679163A174D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BA98A46-FCDB-4851-AA0D-E679163A174D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BA98A46-FCDB-4851-AA0D-E679163A174D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BA98A46-FCDB-4851-AA0D-E679163A174D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 23
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://wenxu.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Micaps.Core\\Micaps.Core.csproj
+		SccProjectName1 = Micaps.Core
+		SccLocalPath1 = Micaps.Core
+		SccProjectUniqueName2 = Micaps.DataEntities\\Micaps.DataEntities.csproj
+		SccProjectName2 = Micaps.DataEntities
+		SccLocalPath2 = Micaps.DataEntities
+		SccProjectUniqueName3 = Micaps.DataAccess\\Micaps.DataAccess.csproj
+		SccProjectName3 = Micaps.DataAccess
+		SccLocalPath3 = Micaps.DataAccess
+		SccProjectUniqueName4 = Micaps.Render\\Micaps.Render.csproj
+		SccProjectName4 = Micaps.Render
+		SccLocalPath4 = Micaps.Render
+		SccProjectUniqueName5 = PMSS.SqlDataAccess\\PMSS.SqlDataAccess.csproj
+		SccProjectName5 = PMSS.SqlDataAccess
+		SccLocalPath5 = PMSS.SqlDataAccess
+		SccProjectUniqueName6 = PMSS.Render\\PMSS.Render.csproj
+		SccProjectName6 = PMSS.Render
+		SccLocalPath6 = PMSS.Render
+		SccProjectUniqueName7 = PMSS.Configure\\PMSS.Configure.csproj
+		SccProjectName7 = PMSS.Configure
+		SccLocalPath7 = PMSS.Configure
+		SccProjectUniqueName8 = PMSS.Send\\PMSS.Send.csproj
+		SccProjectName8 = PMSS.Send
+		SccLocalPath8 = PMSS.Send
+		SccProjectUniqueName9 = PMSS.ConfigureSet\\PMSS.ConfigureSet.csproj
+		SccProjectName9 = PMSS.ConfigureSet
+		SccLocalPath9 = PMSS.ConfigureSet
+		SccProjectUniqueName10 = PMSS.SqlDataOutput\\PMSS.SqlDataOutput.csproj
+		SccProjectName10 = PMSS.SqlDataOutput
+		SccLocalPath10 = PMSS.SqlDataOutput
+		SccProjectUniqueName11 = PMSS.SqlDataIn\\PMSS.SqlDataIn.csproj
+		SccProjectName11 = PMSS.SqlDataIn
+		SccLocalPath11 = PMSS.SqlDataIn
+		SccProjectUniqueName12 = PMSS.DatabaseUI\\PMSS.DatabaseUI.csproj
+		SccProjectName12 = PMSS.DatabaseUI
+		SccLocalPath12 = PMSS.DatabaseUI
+		SccProjectUniqueName13 = PMSS.ProductSend\\PMSS.ProductSend.csproj
+		SccProjectName13 = PMSS.ProductSend
+		SccLocalPath13 = PMSS.ProductSend
+		SccProjectUniqueName14 = PmssWpfApp\\PmssWpfApp.csproj
+		SccProjectName14 = PmssWpfApp
+		SccLocalPath14 = PmssWpfApp
+		SccProjectUniqueName15 = PMSS.CrawlerService\\PMSS.CrawlerService.csproj
+		SccProjectName15 = PMSS.CrawlerService
+		SccLocalPath15 = PMSS.CrawlerService
+		SccProjectUniqueName16 = PMSS.WordProduct\\PMSS.WordProduct.csproj
+		SccProjectName16 = PMSS.WordProduct
+		SccLocalPath16 = PMSS.WordProduct
+		SccProjectUniqueName17 = PMSS.WordProductUI\\PMSS.WordProductUI.csproj
+		SccProjectName17 = PMSS.WordProductUI
+		SccLocalPath17 = PMSS.WordProductUI
+		SccProjectUniqueName18 = Micaps.Product\\Micaps.Product.csproj
+		SccProjectName18 = Micaps.Product
+		SccLocalPath18 = Micaps.Product
+		SccProjectUniqueName19 = Micaps.DataChecking\\Micaps.DataChecking.csproj
+		SccProjectName19 = Micaps.DataChecking
+		SccLocalPath19 = Micaps.DataChecking
+		SccProjectUniqueName20 = PMSS.Log\\PMSS.Log.csproj
+		SccProjectName20 = PMSS.Log
+		SccLocalPath20 = PMSS.Log
+		SccProjectUniqueName21 = PmssWpfNotificationApp\\PmssWpfNotificationApp.csproj
+		SccProjectName21 = PmssWpfNotificationApp
+		SccLocalPath21 = PmssWpfNotificationApp
+		SccProjectUniqueName22 = PMSS.DataToMicaps\\PMSS.DataToMicaps.csproj
+		SccProjectName22 = PMSS.DataToMicaps
+		SccLocalPath22 = PMSS.DataToMicaps
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,37 @@
+﻿<Window x:Class="PMSS.ConfigureSet.WindowPreSign"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PMSS.ConfigureSet"
+        xmlns:ff="clr-namespace:Microsoft.TeamFoundation.MVVM;assembly=Microsoft.TeamFoundation.Controls"
+        mc:Ignorable="d"
+        Title="预报签发人配置" Height="200" Width="310">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="*预报人:"/>
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="*签发人:"/>
+        <TextBox Grid.Row="1" Grid.Column="3" BorderBrush="Brown" Text="{Binding PreName}"/>
+        <TextBox Grid.Row="3" Grid.Column="3" BorderBrush="Brown" Text="{Binding SignName}"/>
+        <Label Name="Hint" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" Content="{Binding ConfigHint}"/>
+        <Button  Grid.Row="5" Grid.Column="6" Content="保存" Command="{Binding SaveConfigCmd}"/>
+    </Grid>
+</Window>
