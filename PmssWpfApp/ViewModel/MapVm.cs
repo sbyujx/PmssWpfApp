@@ -331,6 +331,11 @@ namespace PmssWpfApp.ViewModel
             renderResult.Layer.IsVisible = false;
             //this.baseGroupLayer.ChildLayers.Add(renderResult.Layer);
             this.TreeViewVm.AddBaseLayer(renderResult.Layer);
+
+            renderResult = render.GenerateRenderResult("Data/BaseMaps/Flood.txt");
+            renderResult.Layer.IsVisible = false;
+            //this.baseGroupLayer.ChildLayers.Add(renderResult.Layer);
+            this.TreeViewVm.AddBaseLayer(renderResult.Layer);
         }
         private void LoadTopographicMap()
         {
