@@ -20,7 +20,24 @@ namespace PMSS.Render.FileSource
             var reader = new CitynamesDataAccess(path);
             var entity = reader.RetrieveEntity();
 
-            var layer = GenerateGraphicLayer(entity);
+            var layer = GenerateGraphicLayer(entity, Colors.Black);
+            var labelListSetting = GenerateDefaultLabelSetting();
+            layer.Labeling = GenerateLabelProperties(labelListSetting);
+
+            var result = new RenderResult
+            {
+                Layer = layer,
+                LabelSettings = labelListSetting,
+            };
+
+            return result;
+        }
+        public RenderResult GenerateRenderResult(string path, Color color)
+        {
+            var reader = new CitynamesDataAccess(path);
+            var entity = reader.RetrieveEntity();
+
+            var layer = GenerateGraphicLayer(entity, color);
             var labelListSetting = GenerateDefaultLabelSetting();
             layer.Labeling = GenerateLabelProperties(labelListSetting);
 
@@ -80,14 +97,14 @@ namespace PMSS.Render.FileSource
             return labels;
         }
 
-        private GraphicsLayer GenerateGraphicLayer(CitynamesEntity entity)
+        private GraphicsLayer GenerateGraphicLayer(CitynamesEntity entity, Color color)
         {
             var graphics = new List<Graphic>();
             foreach (var item in entity.Items)
             {
                 if (item.Longitude >= -180 && item.Longitude <= 180 && item.Latitude >= -90 && item.Latitude <= 90)
                 {
-                    graphics.Add(GenerateGraphic(item));
+                    graphics.Add(GenerateGraphic(item, color));
                 }
             }
 
@@ -100,7 +117,7 @@ namespace PMSS.Render.FileSource
 
             return layer;
         }
-        private Graphic GenerateGraphic(CitynamesEntityItem item)
+        private Graphic GenerateGraphic(CitynamesEntityItem item, Color color)
         {
             MapPoint point = new MapPoint(item.Longitude, item.Latitude, SpatialReferences.Wgs84);
             var graphic = new Graphic(point);
@@ -108,7 +125,7 @@ namespace PMSS.Render.FileSource
             var symbol = new SimpleMarkerSymbol
             {
                 Style = SimpleMarkerStyle.Circle,
-                Color = Colors.Black,
+                Color = color,
                 Size = 4
             };
             graphic.Symbol = symbol;
@@ -135,6 +152,7 @@ namespace PMSS.Render.FileSource
             }
 
             var result = new CitynamesEntity();
+            
             using (var reader = new StreamReader(this.filePath))
             {
                 string pattern = @"\s+";
@@ -146,9 +164,10 @@ namespace PMSS.Render.FileSource
 
                 var array = Regex.Split(line, pattern);
                 result.Description = array[0];
-
+                var count = 0;
                 while ((line = reader.ReadLine()?.Trim()) != null)
                 {
+                    count++;
                     array = Regex.Split(line, pattern);
                     if (array.Length != 3)
                     {

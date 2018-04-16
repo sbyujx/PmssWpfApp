@@ -42,6 +42,79 @@ namespace Pmss.Micaps.Product
                 this.isTemplate08 = true;
         }
 
+        public ImageWriter(ProductSaveOption option, string title, string line)
+        {
+            this.saveOption = option;
+            this.title = title;
+            this.line = line;
+        }
+
+        public void WriteCheckProduct(string folderPath, MapView view, bool drawImage = true)
+        {
+            if (!Directory.Exists(folderPath))
+            {
+                throw new DirectoryNotFoundException(folderPath);
+            }
+
+            folderPath = folderPath.TrimEnd('\\');
+            //using (var stream = new FileStream(folderPath + "\\tmp.png", FileMode.OpenOrCreate))
+            using (var stream = new MemoryStream())
+            {
+                var control = view as Control;
+                var rtb = RenderVisaulToBitmap(view, Convert.ToInt32(control.ActualWidth), Convert.ToInt32(control.ActualHeight));
+                GenerateImage(rtb, ImageFormat.GIF, stream);
+
+                stream.Position = 0;
+                System.Drawing.Image initialImg = System.Drawing.Image.FromStream(stream, true);
+                // Cut initialImg to 4:3
+                //var envelope = GetCurrentEnvelop(view);
+                //double xDiff = Math.Abs(Constants.XMin - envelope.XMin + envelope.XMax - Constants.XMax);
+                //double yDiff = Math.Abs(Constants.YMin - envelope.YMin + envelope.YMax - Constants.YMax);
+                double width = initialImg.Width;
+                double height = initialImg.Height;
+                System.Drawing.Rectangle fromRect;
+                System.Drawing.Rectangle toRect;
+                if ((width / height) > ((double)Constants.ImageWidth / (double)Constants.ImageHeight))// Cut X
+                {
+                    //width = Convert.ToInt32(initialImg.Width * (Constants.XMax - Constants.XMin) / (envelope.XMax - envelope.XMin));
+                    width = height * Constants.ImageWidth / Constants.ImageHeight;
+                    fromRect = new System.Drawing.Rectangle(Convert.ToInt32((initialImg.Width - width) / 2), 0, (int)width, (int)height);
+                }
+                else// Cut Y
+                {
+                    //height = Convert.ToInt32(initialImg.Height * (Constants.YMax - Constants.YMin) / (envelope.YMax - envelope.YMin));
+                    height = width * Constants.ImageHeight / Constants.ImageWidth;
+                    fromRect = new System.Drawing.Rectangle(0, Convert.ToInt32((initialImg.Height - height) / 2), (int)width, (int)height);
+                }
+                toRect = new System.Drawing.Rectangle(0, 0, Constants.ImageWidth, Constants.ImageHeight);
+                var cuttedImg = new System.Drawing.Bitmap(Constants.ImageWidth, Constants.ImageHeight);
+
+                // Draw on the new Image
+                this.graphics = System.Drawing.Graphics.FromImage(cuttedImg);
+                this.graphics.DrawImage(initialImg, toRect, fromRect, System.Drawing.GraphicsUnit.Pixel);
+                initialImg.Dispose();
+
+                // Add Text
+                DrawBorder();
+                DrawLogo();
+                DrawTitle();
+                //DrawStartEndDate();
+                DrawAuthor();
+                DrawLine();
+                if (drawImage)
+                {
+                    DrawImageCheck();
+                }
+                //DrawPublishDate();
+                // Add Picture
+
+                string fileName = $"{folderPath}\\{DateTime.Now.ToString("yyyyMMdd_HHmmss")}.gif";
+                cuttedImg.Save(fileName);
+                cuttedImg.Dispose();
+                this.graphics.Dispose();
+            }
+        }
+
         public void Write(string folderPath, MapView view, bool drawImage = true)
         {
             if (!Directory.Exists(folderPath))
@@ -171,6 +244,24 @@ namespace Pmss.Micaps.Product
                 this.graphics.DrawImage(img, toRect, fromRect, System.Drawing.GraphicsUnit.Pixel);
             }
         }
+        private void DrawLine()
+        {
+            System.Drawing.Font font = new System.Drawing.Font("宋体", 16, System.Drawing.FontStyle.Bold);
+            var size = this.graphics.MeasureString(this.line, font);
+            float startX = (Constants.ImageWidth - size.Width) / 2;
+
+            System.Drawing.Brush brush = new System.Drawing.SolidBrush(System.Drawing.Color.Black);
+            System.Drawing.RectangleF rect = new System.Drawing.RectangleF(20, 210, size.Width, 120);
+            System.Drawing.StringFormat format = new System.Drawing.StringFormat
+            {
+                Alignment = System.Drawing.StringAlignment.Center
+            };
+
+            System.Drawing.RectangleF rectBg = new System.Drawing.RectangleF(20, 210 - 20, size.Width, 120 + 20);
+            this.graphics.FillRectangle(new System.Drawing.SolidBrush(System.Drawing.Color.White), rectBg);
+            this.graphics.DrawString(this.line, font, brush, rect, format);
+        }
+        
         private void DrawTitle()
         {
             System.Drawing.Font font = new System.Drawing.Font("宋体", 48, System.Drawing.FontStyle.Bold);
@@ -234,6 +325,41 @@ namespace Pmss.Micaps.Product
             }
 
             this.graphics.DrawString(author, font, brush, rect, format);
+        }
+        private void DrawImageCheck()
+        {
+            int yStart = 1230;
+            string levelImgPath = "Img/Product/FloodCheck.PNG";
+            if (saveOption.ProductType == ProductTypeEnum.Disaster)
+            {
+                levelImgPath = "Img/Product/DisasterCheck.PNG";
+            }        
+
+            if (saveOption.ProductRegion == ProductRegionEnum.Country)
+            {
+                using (System.Drawing.Image img = System.Drawing.Image.FromFile("Img/Product/SouthSea.PNG"))
+                {
+                    System.Drawing.Rectangle fromRect = new System.Drawing.Rectangle(0, 0, img.Width, img.Height);
+                    System.Drawing.Rectangle toRect = new System.Drawing.Rectangle(53, 1230, img.Width, img.Height);
+                    this.graphics.DrawImage(img, toRect, fromRect, System.Drawing.GraphicsUnit.Pixel);
+                }
+                using (System.Drawing.Image img = System.Drawing.Image.FromFile(levelImgPath))
+                {
+                    System.Drawing.Rectangle fromRect = new System.Drawing.Rectangle(0, 0, img.Width, img.Height);
+                    System.Drawing.Rectangle toRect = new System.Drawing.Rectangle(343, yStart, img.Width, img.Height);
+                    this.graphics.DrawImage(img, toRect, fromRect, System.Drawing.GraphicsUnit.Pixel);
+                }
+            }
+            else
+            {
+                using (System.Drawing.Image img = System.Drawing.Image.FromFile(levelImgPath))
+                {
+                    System.Drawing.Rectangle fromRect = new System.Drawing.Rectangle(0, 0, img.Width, img.Height);
+                    System.Drawing.Rectangle toRect = new System.Drawing.Rectangle(53, yStart, img.Width, img.Height);
+                    this.graphics.DrawImage(img, toRect, fromRect, System.Drawing.GraphicsUnit.Pixel);
+                }
+
+            }
         }
         private void DrawImage()
         {
@@ -391,5 +517,6 @@ namespace Pmss.Micaps.Product
         private bool isTemplate20 = false;
         private bool isTemplate08 = false;
         private System.Drawing.Graphics graphics;
+        private string line;
     }
 }

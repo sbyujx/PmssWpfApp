@@ -260,9 +260,17 @@
       <Project>{9b7db7f7-bd2c-4bbc-8f27-d647d955ab37}</Project>
       <Name>Micaps.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Micaps.DataAccess\Micaps.DataAccess.csproj">
+      <Project>{E093E67D-E30D-4ED6-A780-9FB33C5E1471}</Project>
+      <Name>Micaps.DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Micaps.DataChecking\Micaps.DataChecking.csproj">
       <Project>{d381115d-092e-43e5-94c1-4c5e6c66563a}</Project>
       <Name>Micaps.DataChecking</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Micaps.DataEntities\Micaps.DataEntities.csproj">
+      <Project>{645b641e-6025-487e-b4cd-258a0a579548}</Project>
+      <Name>Micaps.DataEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\Micaps.Product\Micaps.Product.csproj">
       <Project>{1a9e5596-de89-4a9f-a117-b81d530647e4}</Project>

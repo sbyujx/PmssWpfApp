@@ -8,7 +8,7 @@ using Pmss.Micaps.Core.Enums;
 
 namespace Pmss.Micaps.Render.FileSource
 {
-    public class RenderResult
+    public class RenderResult : EventArgs
     {
         public DiamondType Type { get; set; }
         public GraphicsLayer Layer { get; set; }

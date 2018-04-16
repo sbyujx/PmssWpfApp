@@ -39,6 +39,12 @@ namespace Pmss.Micaps.Product
             var dict = new SortedDictionary<double, Graphic>();
             foreach (var graphic in sourceLayer.Graphics)
             {
+                if (graphic.Geometry is MapPoint)
+                {
+                    graphic.ZIndex = 5;
+                    layer.Graphics.Add(graphic);
+                }
+
                 if (graphic.Geometry is Polyline)
                 {
                     // Level value will be int. If null, value will be 0
@@ -63,6 +69,8 @@ namespace Pmss.Micaps.Product
                     double area = Math.Abs(GeometryEngine.Area(polygon));
                     dict.Add(area, newGraphic);
                 }
+
+                
             }
 
             int zindex = dict.Keys.Count;

@@ -81,6 +81,11 @@
                     <ribbon:RibbonButton Label="产品导出" IsEnabled="{Binding IsProductLayerSelected}" Command="{Binding ExportProductLayerCommand}" LargeImageSource="Img/StartTab/export.png" />
                     <ribbon:RibbonButton Label="截图" Command="{Binding ExportScreenShotCommand}" LargeImageSource="Img/StartTab/screenshot.png" />
                 </ribbon:RibbonGroup>
+                <ribbon:RibbonGroup Header="检验" DataContext="{Binding Source={StaticResource MapVm}}">
+                    <ribbon:RibbonButton Label="检验山洪" Command="{Binding CheckFloodCommand}" LargeImageSource="Img/StartTab/toorent.png" />
+                    <ribbon:RibbonButton Label="检验地灾" Command="{Binding CheckDizhiCommand}" LargeImageSource="Img/StartTab/geoIn.png" />
+                    <ribbon:RibbonButton Label="导出检验" Command="{Binding CheckOutCommand}" LargeImageSource="Img/StartTab/export.png" />
+                </ribbon:RibbonGroup>
                 <ribbon:RibbonGroup Header="设置" DataContext="{Binding Source={StaticResource LevelManagerVm}}">
                     <ribbon:RibbonButton Label="阈值设置" Command="{Binding OpenLevelSettingDialogCommand}" LargeImageSource="Img/StartTab/set.png" />
                 </ribbon:RibbonGroup>
@@ -402,6 +407,7 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="5" />
+                                <ColumnDefinition Width="400" />
                                 <ColumnDefinition Width="5*" />
                             </Grid.ColumnDefinitions>
                         </Grid>
@@ -415,6 +421,15 @@
                 </StatusBarItem>
                 <StatusBarItem Grid.Column="2">
                     <TextBlock Text="{Binding StatusBarText, Source={StaticResource MouseInfoVm}}" />
+                </StatusBarItem>
+                <StatusBarItem Grid.Column="3">
+                    <ProgressBar
+                        Value="{Binding CurrentProgress, Source={StaticResource MapVm}, Mode=OneWay}"
+            Visibility="Visible"
+            VerticalAlignment="Center"
+            Height="20" Width="500"
+            Minimum="0" Maximum="100"
+            Name="progressBar" />
                 </StatusBarItem>
             </StatusBar>
         </Grid>
