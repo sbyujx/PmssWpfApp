@@ -1337,22 +1337,22 @@ namespace PmssWpfApp.ViewModel
                 //this.AddEditableLayer(renderResult);
                 string title = "山洪检验" + timeTitle;
                 string line1 = "";
-                if ((hitLevel1 + fallLevel1) > 0)
+                if (level1List.Count > 0)
                 {
                     line1 += "RED  HIT:" + hitLevel1 + " " + "MISS:" + missLevel1 + " " + "FALL:" + fallLevel1
                         + " " + "TSR:" + TSR1.ToString("P1") + " " + "PO:" + PO1.ToString("P1") + " " + "FAR:" + FAR1.ToString("P1") + " " + "TS:" + TS1.ToString("F2") + "\n";
                 }
-                if ((hitLevel2 + fallLevel2) > 0)
+                if (level2List.Count > 0)
                 {
                     line1 = line1 + "ORANGE  HIT:" + hitLevel2 + " " + "MISS:" + missLevel2 + " " + "FALL:" + fallLevel2
                     + " " + "TSR:" + TSR2.ToString("P1") + " " + "PO:" + PO2.ToString("P1") + " " + "FAR:" + FAR2.ToString("P1") + " " + "TS:" + TS2.ToString("F2") + "\n";
                 }
-                if ((hitLevel3 + fallLevel3) > 0)
+                if (level3List.Count > 0)
                 {
                     line1 = line1 + "YELLOW  HIT:" + hitLevel3 + " " + "MISS:" + missLevel3 + " " + "FALL:" + fallLevel3
                     + " " + "TSR:" + TSR3.ToString("P1") + " " + "PO:" + PO3.ToString("P1") + " " + "FAR:" + FAR3.ToString("P1") + " " + "TS:" + TS3.ToString("F2") + "\n";
                 }
-                if ((hitLevel4 + fallLevel4) > 0)
+                if (level4List.Count > 0)
                 {
                     line1 = line1 + "BLUE  HIT:" + hitLevel4 + " " + "MISS:" + missLevel4 + " " + "FALL:" + fallLevel4
                     + " " + "TSR:" + TSR4.ToString("P1") + " " + "PO:" + PO4.ToString("P1") + " " + "FAR:" + FAR4.ToString("P1") + " " + "TS:" + TS4.ToString("F2") + "\n";
@@ -1502,17 +1502,17 @@ namespace PmssWpfApp.ViewModel
                 //this.AddEditableLayer(renderResult);
                 string title = "地质灾害检验" + timeTitle;
                 string line1 = "";
-                if ((hitLevel1 + fallLevel1) > 0)
+                if (level1List.Count > 0)
                 {
                     line1 += "RED  HIT:" + hitLevel1 + " " + "MISS:" + missLevel1 + " " + "FALL:" + fallLevel1
                         + " " + "TSR:" + TSR1.ToString("P1") + " " + "PO:" + PO1.ToString("P1") + " " + "FAR:" + FAR1.ToString("P1") + " " + "TS:" + TS1.ToString("F2") + "\n";
                 }
-                if ((hitLevel2 + fallLevel2) > 0)
+                if (level2List.Count > 0)
                 {
                     line1 = line1 + "ORANGE  HIT:" + hitLevel2 + " " + "MISS:" + missLevel2 + " " + "FALL:" + fallLevel2
                     + " " + "TSR:" + TSR2.ToString("P1") + " " + "PO:" + PO2.ToString("P1") + " " + "FAR:" + FAR2.ToString("P1") + " " + "TS:" + TS2.ToString("F2") + "\n";
                 }
-                if ((hitLevel3 + fallLevel3) > 0)
+                if (level3List.Count > 0)
                 {
                     line1 = line1 + "YELLOW  HIT:" + hitLevel3 + " " + "MISS:" + missLevel3 + " " + "FALL:" + fallLevel3
                     + " " + "TSR:" + TSR3.ToString("P1") + " " + "PO:" + PO3.ToString("P1") + " " + "FAR:" + FAR3.ToString("P1") + " " + "TS:" + TS3.ToString("F2") + "\n";
