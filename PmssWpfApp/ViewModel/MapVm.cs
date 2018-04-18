@@ -27,6 +27,7 @@ using System.Globalization;
 using Pmss.Micaps.DataEntities.FileSource;
 using System.Windows.Threading;
 using System.Threading;
+using System.Diagnostics;
 
 namespace PmssWpfApp.ViewModel
 {
@@ -1399,10 +1400,10 @@ namespace PmssWpfApp.ViewModel
                 List<List<GeoCoordinate>> level1List = new List<List<GeoCoordinate>>();
                 List<List<GeoCoordinate>> level2List = new List<List<GeoCoordinate>>();
                 List<List<GeoCoordinate>> level3List = new List<List<GeoCoordinate>>();
-                List<List<GeoCoordinate>> level4List = new List<List<GeoCoordinate>>();
+               // List<List<GeoCoordinate>> level4List = new List<List<GeoCoordinate>>();
                 foreach (Diamond14EntityLine line in entity.Contours)
                 {
-                    if (line.LabelValue == 1)
+                    if (line.LabelValue == 5)
                     {
                         List<GeoCoordinate> lg = new List<GeoCoordinate>();
                         foreach (Diamond14EntityLineItem item in line.Items)
@@ -1414,7 +1415,7 @@ namespace PmssWpfApp.ViewModel
                         }
                         level1List.Add(lg);
                     }
-                    else if (line.LabelValue == 2)
+                    else if (line.LabelValue == 4)
                     {
                         List<GeoCoordinate> lg = new List<GeoCoordinate>();
                         foreach (Diamond14EntityLineItem item in line.Items)
@@ -1720,6 +1721,7 @@ namespace PmssWpfApp.ViewModel
                 {
                     //count++;
                     coodList.Add(cood);
+                    Debug.WriteLine(url);
                     //Console.WriteLine(url);
                    // Console.WriteLine("Lat:" + cood.Lat + " ,Lon:" + cood.Lon);
                 }
@@ -4325,8 +4327,18 @@ new GeoCoordinate{Lat=28.22     , Lon=109.01},
 
                 if (type.Equals("地质灾害"))
                 {
-                    if (catStr.Contains("滑坡") || catStr.Contains("塌方") || catStr.Contains("垮塌")
-                        || (catStr.Contains("倒塌") && (!catStr.Contains("房屋倒塌")) && (!catStr.Contains("倒塌房屋"))))
+                    //排除关键词
+                    catStr.Replace("房屋倒塌", "");
+                    catStr.Replace("倒塌房屋", "");
+                    catStr.Replace("倒塌房间", "");
+                    catStr.Replace("房间倒塌", "");
+                    catStr.Replace("倒塌农房", "");
+                    catStr.Replace("农房倒塌", "");
+                    if (catStr.Contains("滑坡") || catStr.Contains("塌方") || catStr.Contains("垮塌") || 
+                        (catStr.Contains("倒塌") 
+                        && (!catStr.Contains("房屋倒塌")) && (!catStr.Contains("倒塌房屋")) 
+                        && (!catStr.Contains("倒塌房间")) && (!catStr.Contains("房间倒塌"))
+                        && (!catStr.Contains("倒塌农房")) && (!catStr.Contains("农房倒塌"))))
                     {
                         isTheType = true;
                     }
