@@ -99,7 +99,7 @@ namespace Pmss.Micaps.Product
                 DrawLogo();
                 DrawTitle();
                 //DrawStartEndDate();
-                DrawAuthor();
+                //DrawAuthor();
                 DrawLine();
                 if (drawImage)
                 {
@@ -246,7 +246,7 @@ namespace Pmss.Micaps.Product
         }
         private void DrawLine()
         {
-            System.Drawing.Font font = new System.Drawing.Font("宋体", 16, System.Drawing.FontStyle.Bold);
+            System.Drawing.Font font = new System.Drawing.Font("宋体", 20, System.Drawing.FontStyle.Bold);
             var size = this.graphics.MeasureString(this.line, font);
             float startX = (Constants.ImageWidth - size.Width) / 2;
 

@@ -1340,23 +1340,23 @@ namespace PmssWpfApp.ViewModel
                 string line1 = "";
                 if (level1List.Count > 0)
                 {
-                    line1 += "RED  HIT:" + hitLevel1 + " " + "MISS:" + missLevel1 + " " + "FALL:" + fallLevel1
-                        + " " + "TSR:" + TSR1.ToString("P1") + " " + "PO:" + PO1.ToString("P1") + " " + "FAR:" + FAR1.ToString("P1") + " " + "TS:" + TS1.ToString("F2") + "\n";
+                    line1 += "红  正确(" + hitLevel1 + ") " + "漏报(" + missLevel1 + ") " + "空报(" + fallLevel1
+                        + ") " + "TSR(" + TSR1.ToString("P1") + ") " + "PO(" + PO1.ToString("P1") + ") " + "FAR(" + FAR1.ToString("P1") + ") " + "TS(" + TS1.ToString("F2") + ")\n";
                 }
                 if (level2List.Count > 0)
                 {
-                    line1 = line1 + "ORANGE  HIT:" + hitLevel2 + " " + "MISS:" + missLevel2 + " " + "FALL:" + fallLevel2
-                    + " " + "TSR:" + TSR2.ToString("P1") + " " + "PO:" + PO2.ToString("P1") + " " + "FAR:" + FAR2.ToString("P1") + " " + "TS:" + TS2.ToString("F2") + "\n";
+                    line1 = line1 + "橙  正确(" + hitLevel2 + ") " + "漏报(" + missLevel2 + ") " + "空报(" + fallLevel2
+                    + ") " + "TSR(" + TSR2.ToString("P1") + ") " + "PO(" + PO2.ToString("P1") + ") " + "FAR(" + FAR2.ToString("P1") + ") " + "TS(" + TS2.ToString("F2") + ")\n";
                 }
                 if (level3List.Count > 0)
                 {
-                    line1 = line1 + "YELLOW  HIT:" + hitLevel3 + " " + "MISS:" + missLevel3 + " " + "FALL:" + fallLevel3
-                    + " " + "TSR:" + TSR3.ToString("P1") + " " + "PO:" + PO3.ToString("P1") + " " + "FAR:" + FAR3.ToString("P1") + " " + "TS:" + TS3.ToString("F2") + "\n";
+                    line1 = line1 + "黄  正确(" + hitLevel3 + ") " + "漏报(" + missLevel3 + ") " + "空报(" + fallLevel3
+                    + ") " + "TSR(" + TSR3.ToString("P1") + ") " + "PO(" + PO3.ToString("P1") + ") " + "FAR(" + FAR3.ToString("P1") + ") " + "TS(" + TS3.ToString("F2") + ")\n";
                 }
                 if (level4List.Count > 0)
                 {
-                    line1 = line1 + "BLUE  HIT:" + hitLevel4 + " " + "MISS:" + missLevel4 + " " + "FALL:" + fallLevel4
-                    + " " + "TSR:" + TSR4.ToString("P1") + " " + "PO:" + PO4.ToString("P1") + " " + "FAR:" + FAR4.ToString("P1") + " " + "TS:" + TS4.ToString("F2") + "\n";
+                    line1 = line1 + "蓝  正确(" + hitLevel4 + ") " + "漏报(" + missLevel4 + ") " + "空报(" + fallLevel4
+                    + ") " + "TSR(" + TSR4.ToString("P1") + ") " + "PO(" + PO4.ToString("P1") + ") " + "FAR(" + FAR4.ToString("P1") + ") " + "TS(" + TS4.ToString("F2") + ")\n";
                 }
                 this.checkTitle = title;
                 this.checkLine = line1;
@@ -1505,18 +1505,18 @@ namespace PmssWpfApp.ViewModel
                 string line1 = "";
                 if (level1List.Count > 0)
                 {
-                    line1 += "RED  HIT:" + hitLevel1 + " " + "MISS:" + missLevel1 + " " + "FALL:" + fallLevel1
-                        + " " + "TSR:" + TSR1.ToString("P1") + " " + "PO:" + PO1.ToString("P1") + " " + "FAR:" + FAR1.ToString("P1") + " " + "TS:" + TS1.ToString("F2") + "\n";
+                    line1 += "红  正确(" + hitLevel1 + ") " + "漏报(" + missLevel1 + ") " + "空报(" + fallLevel1
+                        + ") " + "TSR(" + TSR1.ToString("P1") + ") " + "PO(" + PO1.ToString("P1") + ") " + "FAR(" + FAR1.ToString("P1") + ") " + "TS(" + TS1.ToString("F2") + ")\n";
                 }
                 if (level2List.Count > 0)
                 {
-                    line1 = line1 + "ORANGE  HIT:" + hitLevel2 + " " + "MISS:" + missLevel2 + " " + "FALL:" + fallLevel2
-                    + " " + "TSR:" + TSR2.ToString("P1") + " " + "PO:" + PO2.ToString("P1") + " " + "FAR:" + FAR2.ToString("P1") + " " + "TS:" + TS2.ToString("F2") + "\n";
+                    line1 = line1 + "橙  正确(" + hitLevel2 + ") " + "漏报(" + missLevel2 + ") " + "空报(" + fallLevel2
+                    + ") " + "TSR(" + TSR2.ToString("P1") + ") " + "PO(" + PO2.ToString("P1") + ") " + "FAR(" + FAR2.ToString("P1") + ") " + "TS(" + TS2.ToString("F2") + ")\n";
                 }
                 if (level3List.Count > 0)
                 {
-                    line1 = line1 + "YELLOW  HIT:" + hitLevel3 + " " + "MISS:" + missLevel3 + " " + "FALL:" + fallLevel3
-                    + " " + "TSR:" + TSR3.ToString("P1") + " " + "PO:" + PO3.ToString("P1") + " " + "FAR:" + FAR3.ToString("P1") + " " + "TS:" + TS3.ToString("F2") + "\n";
+                    line1 = line1 + "黄  正确(" + hitLevel3 + ") " + "漏报(" + missLevel3 + ") " + "空报(" + fallLevel3
+                    + ") " + "TSR(" + TSR3.ToString("P1") + ") " + "PO(" + PO3.ToString("P1") + ") " + "FAR(" + FAR3.ToString("P1") + ") " + "TS(" + TS3.ToString("F2") + ")\n";
                 }
                 this.checkTitle = title;
                 this.checkLine = line1;
