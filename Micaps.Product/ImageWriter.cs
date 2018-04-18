@@ -254,7 +254,7 @@ namespace Pmss.Micaps.Product
             System.Drawing.RectangleF rect = new System.Drawing.RectangleF(20, 210, size.Width, 120);
             System.Drawing.StringFormat format = new System.Drawing.StringFormat
             {
-                Alignment = System.Drawing.StringAlignment.Center
+                Alignment = System.Drawing.StringAlignment.Near
             };
 
             System.Drawing.RectangleF rectBg = new System.Drawing.RectangleF(20, 210 - 20, size.Width, 120 + 20);
