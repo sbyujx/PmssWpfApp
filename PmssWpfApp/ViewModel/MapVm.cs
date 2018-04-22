@@ -703,6 +703,16 @@ namespace PmssWpfApp.ViewModel
             renderResult.Layer.IsVisible = false;
             //this.baseGroupLayer.ChildLayers.Add(renderResult.Layer);
             this.TreeViewVm.AddBaseLayer(renderResult.Layer);
+
+            renderResult = render.GenerateRenderResult("Data/BaseMaps/LandSlideHazardPoint.txt", Colors.Red);
+            renderResult.Layer.IsVisible = false;
+            //this.baseGroupLayer.ChildLayers.Add(renderResult.Layer);
+            this.TreeViewVm.AddBaseLayer(renderResult.Layer);
+
+            renderResult = render.GenerateRenderResult("Data/BaseMaps/DebrisflowHazardPoint.txt", Colors.Red);
+            renderResult.Layer.IsVisible = false;
+            //this.baseGroupLayer.ChildLayers.Add(renderResult.Layer);
+            this.TreeViewVm.AddBaseLayer(renderResult.Layer);
         }
         private void LoadTopographicMap()
         {
@@ -1336,7 +1346,8 @@ namespace PmssWpfApp.ViewModel
                     
 
                 //this.AddEditableLayer(renderResult);
-                string title = "山洪检验" + timeTitle;
+                string title = "中央气象台山洪" + timeTitle.Substring(12,2) + "小时检验" + Environment.NewLine;
+                title += timeTitle.Substring(0, 4) + "年" + timeTitle.Substring(4, 2) + "月" + timeTitle.Substring(6, 2) + "日" + timeTitle.Substring(8, 2) + "时";
                 string line1 = "";
                 if (level1List.Count > 0)
                 {
@@ -1501,8 +1512,9 @@ namespace PmssWpfApp.ViewModel
 
 
                 //this.AddEditableLayer(renderResult);
-                string title = "地质灾害检验" + timeTitle;
-                string line1 = "";
+
+                string title = "中央气象台地质灾害" + timeTitle.Substring(12, 2) + "小时检验" + Environment.NewLine;
+                title += timeTitle.Substring(0, 4) + "年" + timeTitle.Substring(4, 2) + "月" + timeTitle.Substring(6, 2) + "日" + timeTitle.Substring(8, 2) + "时"; string line1 = "";
                 if (level1List.Count > 0)
                 {
                     line1 += "红色预警区域  正确(" + hitLevel1 + ") " + "漏报(" + missLevel1 + ") " + "空报(" + fallLevel1

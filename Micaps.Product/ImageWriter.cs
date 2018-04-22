@@ -97,9 +97,11 @@ namespace Pmss.Micaps.Product
                 // Add Text
                 DrawBorder();
                 DrawLogo();
-                DrawTitle();
+                DrawCheckTitle();
                 //DrawStartEndDate();
                 //DrawAuthor();
+                //中央气象台山洪24小时检验
+                //2017年04月20日20时
                 DrawLine();
                 if (drawImage)
                 {
@@ -251,13 +253,13 @@ namespace Pmss.Micaps.Product
             float startX = (Constants.ImageWidth - size.Width) / 2;
 
             System.Drawing.Brush brush = new System.Drawing.SolidBrush(System.Drawing.Color.Black);
-            System.Drawing.RectangleF rect = new System.Drawing.RectangleF(20, 210, size.Width, 120);
+            System.Drawing.RectangleF rect = new System.Drawing.RectangleF(20, 225, size.Width, 120);
             System.Drawing.StringFormat format = new System.Drawing.StringFormat
             {
                 Alignment = System.Drawing.StringAlignment.Near
             };
 
-            System.Drawing.RectangleF rectBg = new System.Drawing.RectangleF(20, 210 - 20, size.Width, 120 + 20);
+            System.Drawing.RectangleF rectBg = new System.Drawing.RectangleF(20, 225 - 10, size.Width, 120 + 10);
             this.graphics.FillRectangle(new System.Drawing.SolidBrush(System.Drawing.Color.White), rectBg);
             this.graphics.DrawString(this.line, font, brush, rect, format);
         }
@@ -276,6 +278,24 @@ namespace Pmss.Micaps.Product
             };
 
             System.Drawing.RectangleF rectBg = new System.Drawing.RectangleF(startX, 110 - 20, size.Width, 80 + 20);
+            this.graphics.FillRectangle(new System.Drawing.SolidBrush(System.Drawing.Color.White), rectBg);
+            this.graphics.DrawString(this.title, font, brush, rect, format);
+        }
+
+        private void DrawCheckTitle()
+        {
+            System.Drawing.Font font = new System.Drawing.Font("宋体", 30, System.Drawing.FontStyle.Bold);
+            var size = this.graphics.MeasureString(this.title, font);
+            float startX = (Constants.ImageWidth - size.Width) / 2;
+
+            System.Drawing.Brush brush = new System.Drawing.SolidBrush(System.Drawing.Color.Black);
+            System.Drawing.RectangleF rect = new System.Drawing.RectangleF(startX, 110, size.Width, 80);
+            System.Drawing.StringFormat format = new System.Drawing.StringFormat
+            {
+                Alignment = System.Drawing.StringAlignment.Center
+            };
+
+            System.Drawing.RectangleF rectBg = new System.Drawing.RectangleF(startX, 110 - 10, size.Width, 80 + 10);
             this.graphics.FillRectangle(new System.Drawing.SolidBrush(System.Drawing.Color.White), rectBg);
             this.graphics.DrawString(this.title, font, brush, rect, format);
         }
